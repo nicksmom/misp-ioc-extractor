@@ -23,7 +23,7 @@ export AWS_SECRET_ACCESS_KEY='AWS_SECRET_ACCESS_KEY'
 
 ## Enable as service
 ```
-nano /etc/systemd/system/fetch-misp-ioc.service
+sudo nano /etc/systemd/system/fetch-misp-ioc.service
 ```
 ```
 [Unit]
@@ -45,4 +45,8 @@ RestartSec=30s
 [Install]
 WantedBy=multi-user.target
 ```
-# R```eload systemd
+
+## Reload systemd
+```
+sudo systemctl daemon-reload
+```
